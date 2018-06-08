@@ -8,25 +8,25 @@ string RubliToString(int rub)
 {
 	if (((rub / 10) % 10) == 1)
 	{
-		return "рублей";
+		return "СЂСѓР±Р»РµР№";
 	}
 	else
 	{
 		switch (rub % 10)
 		{
 			case 1:
-				return "рубль";
+				return "Г°ГіГЎГ«Гј";
 			case 2: 
 			case 3:
 			case 4:
-				return "рубля";
+				return "Г°ГіГЎГ«Гї";
 			case 5:
 			case 6:
 			case 7:
 			case 8:
 			case 9:
 			case 0:
-				return "рублей";
+				return "Г°ГіГЎГ«ГҐГ©";
 		}
 	}	
 }
@@ -35,25 +35,25 @@ string KopeykiToString(int kop)
 {
 	if (((kop / 10) % 10) == 1)
 	{
-		return "копеек";
+		return "ГЄГ®ГЇГҐГҐГЄ";
 	}
 	else
 	{
 		switch (kop % 10)
 		{
 		case 1:
-			return "копейка";
+			return "ГЄГ®ГЇГҐГ©ГЄГ ";
 		case 2:
 		case 3:
 		case 4:
-			return "копейки";
+			return "ГЄГ®ГЇГҐГ©ГЄГЁ";
 		case 5:
 		case 6:
 		case 7:
 		case 8:
 		case 9:
 		case 0:
-			return "копеек";
+			return "ГЄГ®ГЇГҐГҐГЄ";
 		}
 	}
 }
@@ -61,12 +61,12 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	int TotalKopeyki;
-	cout << "Введите количество копеек: ";
+	cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЄГ®ГЇГҐГҐГЄ: ";
 	cin >> TotalKopeyki;
 	int rubli = TotalKopeyki / 100;
 	int kopeyki = TotalKopeyki % 100;
-	cout << "Входные данные: " << TotalKopeyki << endl;
-	cout << "Выходные данные: " << rubli << ' ' << RubliToString(rubli) << ' ' << kopeyki << ' ' << KopeykiToString(kopeyki) << endl;
+	cout << "Г‚ГµГ®Г¤Г­Г»ГҐ Г¤Г Г­Г­Г»ГҐ: " << TotalKopeyki << endl;
+	cout << "Г‚Г»ГµГ®Г¤Г­Г»ГҐ Г¤Г Г­Г­Г»ГҐ: " << rubli << ' ' << RubliToString(rubli) << ' ' << kopeyki << ' ' << KopeykiToString(kopeyki) << endl;
 	system("pause");
 	return 0;
 }
